@@ -28,6 +28,7 @@ import { NFTTabs } from "../NFTDetailsIndex";
 
 //IMPORT SMART CONTRACT
 import { NFTMarketplaceContext } from "../../Context/NFTMarketplaceContext";
+import { CgLivePhoto, CgMediaLive } from "react-icons/cg";
 
 const NFTDescription = ({ nft }) => {
   const [social, setSocial] = useState(false);
@@ -39,25 +40,25 @@ const NFTDescription = ({ nft }) => {
   const router = useRouter();
 
   const historyArray = [
-    images.user1,
-    images.user2,
-    images.user3,
-    images.user4,
-    images.user5,
+    // images.user1,
+    // images.user2,
+    // images.user3,
+    // images.user4,
+    // images.user5,
   ];
   const provananceArray = [
-    images.user6,
-    images.user7,
-    images.user8,
-    images.user9,
-    images.user10,
+    // images.user6,
+    // images.user7,
+    // images.user8,
+    // images.user9,
+    // images.user10,
   ];
   const ownerArray = [
-    images.user1,
-    images.user8,
-    images.user2,
-    images.user6,
-    images.user5,
+    // images.user1,
+    // images.user8,
+    // images.user2,
+    // images.user6,
+    // images.user5,
   ];
 
   const openSocial = () => {
@@ -180,7 +181,10 @@ const NFTDescription = ({ nft }) => {
                 {/* <Link href={{ pathname: "/author", query: `${nft.seller}` }}> */}
                 <Link href={{ pathname: "/author" }}>
                   <span>
-                    Karli Costa <MdVerified />
+                    {currentAccount.slice(0, 5) +
+                      "..." +
+                      currentAccount.slice(-4)}
+                    <MdVerified />
                   </span>
                 </Link>
               </div>
@@ -210,7 +214,12 @@ const NFTDescription = ({ nft }) => {
             </p>
 
             <div className={Style.NFTDescription_box_profile_biding_box_timer}>
-              <div
+              <div>
+                <h1>
+                  Live <CgMediaLive />{" "}
+                </h1>
+              </div>
+              {/* <div
                 className={
                   Style.NFTDescription_box_profile_biding_box_timer_item
                 }
@@ -241,7 +250,7 @@ const NFTDescription = ({ nft }) => {
               >
                 <p>12</p>
                 <span>secs</span>
-              </div>
+              </div> */}
             </div>
 
             <div className={Style.NFTDescription_box_profile_biding_box_price}>
@@ -256,7 +265,7 @@ const NFTDescription = ({ nft }) => {
                 </p>
               </div>
 
-              <span>[96 in stock]</span>
+              {/* <span>[96 in stock]</span> */}
             </div>
 
             <div className={Style.NFTDescription_box_profile_biding_box_button}>

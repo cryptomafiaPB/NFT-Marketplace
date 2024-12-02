@@ -2,7 +2,11 @@ import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { AiFillFire, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdVerified, MdTimer } from "react-icons/md";
-import { TbArrowBigLeftLines, TbArrowBigRightLine } from "react-icons/tb";
+import {
+  TbArrowBigLeftLines,
+  TbArrowBigRightLine,
+  TbLiveView,
+} from "react-icons/tb";
 
 //INTERNAL IMPORT
 import Style from "./BigNFTSilder.module.css";
@@ -16,7 +20,7 @@ const BigNFTSilder = () => {
     {
       title: "Hello NFT",
       id: 1,
-      name: "Daulat Hussain",
+      name: "John Cena",
       collection: "GYm",
       price: "00664 ETH",
       like: 243,
@@ -148,7 +152,8 @@ const BigNFTSilder = () => {
             </p>
 
             <div className={Style.bigNFTSlider_box_left_bidding_box_timer}>
-              <div
+              <h2> Live</h2>
+              {/* <div
                 className={Style.bigNFTSlider_box_left_bidding_box_timer_item}
               >
                 <p>{sliderData[idNumber].time.days}</p>
@@ -174,7 +179,7 @@ const BigNFTSilder = () => {
               >
                 <p>{sliderData[idNumber].time.seconds}</p>
                 <span>secs</span>
-              </div>
+              </div> */}
             </div>
 
             <div className={Style.bigNFTSlider_box_left_button}>

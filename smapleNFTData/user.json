@@ -2,7 +2,7 @@
   {
     "creatorName": "Dony Herrera",
     "nftImage": "nft-image-1.png",
-    "userImage": "user-1.png",
+    "userImage": "user-1.jpg",
     "accountAddress": "0x829BD824B016326A401d083B33D092293333A830",
     "creatorId": "1",
     "intro": "Punk #4786 / An OG Cryptopunk Collector, hoarder of NFTs. Contributing to @ether_cards, an NFT Monetization Platform.",
@@ -11,7 +11,7 @@
         "type": "image",
         "like": 342,
         "nftImage": "nft-image-2.png",
-        "likeProfile": ["user-1.png", "user-2.png", "user-4.png", "user-3.png"],
+        "likeProfile": ["user-1.jpg", "user-2.png", "user-4.png", "user-3.png"],
         "nftName": "Ape Monkey",
         "nftId": 1,
         "nftPrice": 2.0,
@@ -34,7 +34,7 @@
         "likeProfile": [
           "user-9.png",
           "user-10.png",
-          "user-1.png",
+          "user-1.jpg",
           "user-2.png"
         ],
         "nftName": "Hey Monkey",
@@ -46,7 +46,7 @@
         "type": "image",
         "like": 12,
         "nftImage": "nft-image-1.png",
-        "likeProfile": ["user-3.png", "user-1.png", "user-4.png", "user-5.png"],
+        "likeProfile": ["user-3.png", "user-1.jpg", "user-4.png", "user-5.png"],
         "nftName": "Hey Monkey",
         "nftId": 4,
         "nftPrice": 3.0,
@@ -68,7 +68,7 @@
         "type": "image",
         "nftImage": "nft-image-1.png",
         "like": 342,
-        "likeProfile": ["user-1.png", "user-2.png", "user-4.png", "user-3.png"],
+        "likeProfile": ["user-1.jpg", "user-2.png", "user-4.png", "user-3.png"],
         "nftName": "Ape Monkey",
         "nftId": 1,
         "nftPrice": 2.0,
@@ -91,7 +91,7 @@
         "likeProfile": [
           "user-9.png",
           "user-10.png",
-          "user-1.png",
+          "user-1.jpg",
           "user-2.png"
         ],
         "nftName": "Hey Monkey",
@@ -103,7 +103,7 @@
         "type": "image",
         "like": 12,
         "nftImage": "nft-image-2.png",
-        "likeProfile": ["user-3.png", "user-1.png", "user-4.png", "user-5.png"],
+        "likeProfile": ["user-3.png", "user-1.jpg", "user-4.png", "user-5.png"],
         "nftName": "Hey Monkey",
         "nftId": 4,
         "nftPrice": 3.0,
@@ -125,7 +125,7 @@
         "type": "image",
         "nftImage": "nft-image-1.png",
         "like": 342,
-        "likeProfile": ["user-1.png", "user-2.png", "user-4.png", "user-3.png"],
+        "likeProfile": ["user-1.jpg", "user-2.png", "user-4.png", "user-3.png"],
         "nftName": "Ape Monkey",
         "nftId": 1,
         "nftPrice": 2.0,
@@ -148,7 +148,7 @@
         "likeProfile": [
           "user-9.png",
           "user-10.png",
-          "user-1.png",
+          "user-1.jpg",
           "user-2.png"
         ],
         "nftName": "Hey Monkey",
@@ -160,7 +160,7 @@
     "followers": [
       {
         "name": "Jone Sina",
-        "userImage": "user-1.png",
+        "userImage": "user-1.jpg",
         "description": " Cryptopunk Collector, hoarder of NFTs. Contributing to @ether_cards, an NFT Monetization Platform",
         "bool": true
       },

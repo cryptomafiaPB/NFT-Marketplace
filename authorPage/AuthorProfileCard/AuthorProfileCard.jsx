@@ -64,7 +64,7 @@ const AuthorProfileCard = ({ currentAccount }) => {
 
         <div className={Style.AuthorProfileCard_box_info}>
           <h2>
-            Dony Herrera{""}{" "}
+            {currentAccount.slice(0, 5) + "..." + currentAccount.slice(-4)}
             <span>
               <MdVerified />
             </span>{" "}

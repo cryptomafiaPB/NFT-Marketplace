@@ -43,64 +43,64 @@ const AuthorNFTCardBox = ({
   // ];
 
   const followerArray = [
-    {
-      background: images.creatorbackground1,
-      user: images.user1,
-      seller: "d84ff74hf99999f9974hf774f99f",
-    },
-    {
-      background: images.creatorbackground2,
-      user: images.user2,
-      seller: "d84ff74hf99999f9974hf774f99f",
-    },
-    {
-      background: images.creatorbackground3,
-      user: images.user3,
-      seller: "d84ff74hf99999f9974hf774f99f",
-    },
-    {
-      background: images.creatorbackground4,
-      user: images.user4,
-      seller: "d84ff74hf99999f9974hf774f99f",
-    },
-    {
-      background: images.creatorbackground5,
-      user: images.user5,
-      seller: "d84ff74hf99999f9974hf774f99f",
-    },
-    {
-      background: images.creatorbackground6,
-      user: images.user6,
-      seller: "d84ff74hf99999f9974hf774f99f",
-    },
+    // {
+    //   background: images.creatorbackground1,
+    //   user: images.user1,
+    //   seller: "d84ff74hf99999f9974hf774f99f",
+    // },
+    // {
+    //   background: images.creatorbackground2,
+    //   user: images.user2,
+    //   seller: "d84ff74hf99999f9974hf774f99f",
+    // },
+    // {
+    //   background: images.creatorbackground3,
+    //   user: images.user3,
+    //   seller: "d84ff74hf99999f9974hf774f99f",
+    // },
+    // {
+    //   background: images.creatorbackground4,
+    //   user: images.user4,
+    //   seller: "d84ff74hf99999f9974hf774f99f",
+    // },
+    // {
+    //   background: images.creatorbackground5,
+    //   user: images.user5,
+    //   seller: "d84ff74hf99999f9974hf774f99f",
+    // },
+    // {
+    //   background: images.creatorbackground6,
+    //   user: images.user6,
+    //   seller: "d84ff74hf99999f9974hf774f99f",
+    // },
   ];
 
   const followingArray = [
-    {
-      background: images.creatorbackground3,
-      user: images.user3,
-      seller: "d84ff74hf99999f9974hf774f99f",
-    },
-    {
-      background: images.creatorbackground4,
-      user: images.user4,
-      seller: "d84ff74hf99999f9974hf774f99f",
-    },
-    {
-      background: images.creatorbackground5,
-      user: images.user5,
-      seller: "d84ff74hf99999f9974hf774f99f",
-    },
-    {
-      background: images.creatorbackground6,
-      user: images.user6,
-      seller: "d84ff74hf99999f9974hf774f99f",
-    },
-    {
-      background: images.creatorbackground1,
-      user: images.user1,
-      seller: "d84ff74hf99999f9974hf774f99f",
-    },
+    // {
+    //   background: images.creatorbackground3,
+    //   user: images.user3,
+    //   seller: "d84ff74hf99999f9974hf774f99f",
+    // },
+    // {
+    //   background: images.creatorbackground4,
+    //   user: images.user4,
+    //   seller: "d84ff74hf99999f9974hf774f99f",
+    // },
+    // {
+    //   background: images.creatorbackground5,
+    //   user: images.user5,
+    //   seller: "d84ff74hf99999f9974hf774f99f",
+    // },
+    // {
+    //   background: images.creatorbackground6,
+    //   user: images.user6,
+    //   seller: "d84ff74hf99999f9974hf774f99f",
+    // },
+    // {
+    //   background: images.creatorbackground1,
+    //   user: images.user1,
+    //   seller: "d84ff74hf99999f9974hf774f99f",
+    // },
   ];
 
   return (

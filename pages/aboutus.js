@@ -9,23 +9,28 @@ import images from "../img";
 const aboutus = () => {
   const founderArray = [
     {
-      name: "Niamh O'Shea",
-      position: "Co-founder and Chief Executive",
+      name: "Harshwardhan Patil",
+      position: "",
       images: images.founder1,
     },
     {
-      name: "Danien Jame",
-      position: "Co-founder and Chief Executive",
+      name: "Pranav Bagal",
+      position: "",
       images: images.founder2,
     },
     {
-      name: "Orla Dwyer",
-      position: "Co-founder, Chairman",
+      name: "Yashraj patil",
+      position: "",
       images: images.founder3,
     },
     {
-      name: "Dara Frazier",
-      position: "Co-Founder, Chief Strategy Officer",
+      name: "Yash Alhat",
+      position: "",
+      images: images.founder4,
+    },
+    {
+      name: "Vivek Unhale",
+      position: "",
       images: images.founder4,
     },
   ];
@@ -33,15 +38,15 @@ const aboutus = () => {
   const factsArray = [
     {
       title: "10 million",
-      info: "Articles have been public around the world (as of Sept. 30, 2021)",
+      info: "Articles have been public around the world (as of Sept. 30, 2024)",
     },
     {
       title: "100,000",
-      info: "Registered users account (as of Sept. 30, 2021)",
+      info: "Registered users account (as of Sept. 30, 2024)",
     },
     {
       title: "220+",
-      info: "Countries and regions have our presence (as of Sept. 30, 2021",
+      info: "Countries and regions have our presence (as of Sept. 30, 2024",
     },
   ];
   return (

@@ -47,6 +47,8 @@ export const NFTMarketplaceProvider = ({ children }) => {
   const [openError, setOpenError] = useState(false);
   const [currentAccount, setCurrentAccount] = useState("");
   const [accountBalance, setAccountBalance] = useState("");
+  // For user from backend
+  const [user, setUser] = useState();
   const router = useRouter();
 
   //---CHECK IF WALLET IS CONNECTD
@@ -90,11 +92,18 @@ export const NFTMarketplaceProvider = ({ children }) => {
         method: "eth_requestAccounts",
       });
 
-      console.log(accounts);
+      // Request to /api/login
+
+      // const response = await axios.post("http://127.0.0.1:3001/api/login", {
+      //   walletAddress: accounts[0],
+      // });
+
+      // console.log("response", response.data);
       setCurrentAccount(accounts[0]);
 
       connectingWithSmartContract();
     } catch (error) {
+      console.log(error);
       setError("Error while connecting to wallet");
       setOpenError(true);
     }
@@ -194,38 +203,51 @@ export const NFTMarketplaceProvider = ({ children }) => {
         const web3Modal = new Web3Modal();
         const connection = await web3Modal.connect();
         const provider = new ethers.providers.Web3Provider(connection);
-  
+
         const contract = fetchContract(provider);
-  
+
         const data = await contract.fetchMarketItems();
-        console.log('Market Items Data:', data);
-  
+        console.log("Market Items Data:", data);
+
         const items = await Promise.all(
-          data.map(async ({ tokenId, seller, owner, price: unformattedPrice }) => {
-            try {
-              const tokenURI = await contract.tokenURI(tokenId);
-              const { data: { image, name, description } } = await axios.get(tokenURI);
-              const price = ethers.utils.formatUnits(unformattedPrice.toString(), "ether");
-  
-              return {
-                price,
-                tokenId: tokenId.toNumber(),
-                seller,
-                owner,
-                image,
-                name,
-                description,
-                tokenURI,
-              };
-            } catch (error) {
-              console.error(`Error fetching token URI or metadata for tokenId ${tokenId}`, error);
-              return null;
+          data.map(
+            async ({ tokenId, seller, owner, price: unformattedPrice }) => {
+              try {
+                const tokenURI = await contract.tokenURI(tokenId);
+                const {
+                  data: { image, name, description },
+                } = await axios.get(tokenURI);
+                const price = ethers.utils.formatUnits(
+                  unformattedPrice.toString(),
+                  "ether"
+                );
+
+                return {
+                  price,
+                  tokenId: tokenId.toNumber(),
+                  seller,
+                  owner,
+                  image,
+                  name,
+                  description,
+                  tokenURI,
+                };
+              } catch (error) {
+                console.error(
+                  `Error fetching token URI or metadata for tokenId ${tokenId}`,
+                  error
+                );
+                return null;
+              }
             }
-          })
+          )
         );
-        
-        console.log("NFT Items:", items.filter(item => item !== null));
-        return items.filter(item => item !== null);
+
+        console.log(
+          "NFT Items:",
+          items.filter((item) => item !== null)
+        );
+        return items.filter((item) => item !== null);
       }
     } catch (error) {
       setError("Error while fetching NFTs");
@@ -233,44 +255,55 @@ export const NFTMarketplaceProvider = ({ children }) => {
       console.error("Error in fetchNFTs:", error);
     }
   };
-  
+
   const fetchMyNFTsOrListedNFTs = async (type) => {
     try {
       const address = await checkIfWalletConnected();
       if (address) {
         const contract = await connectingWithSmartContract();
-  
-        const data = type === "fetchItemsListed"
-          ? await contract.fetchItemsListed()
-          : await contract.fetchMyNFTs();
-  
+
+        const data =
+          type === "fetchItemsListed"
+            ? await contract.fetchItemsListed()
+            : await contract.fetchMyNFTs();
+
         console.log(`${type} Data:`, data);
-  
+
         const items = await Promise.all(
-          data.map(async ({ tokenId, seller, owner, price: unformattedPrice }) => {
-            try {
-              const tokenURI = await contract.tokenURI(tokenId);
-              const { data: { image, name, description } } = await axios.get(tokenURI);
-              const price = ethers.utils.formatUnits(unformattedPrice.toString(), "ether");
-  
-              return {
-                price,
-                tokenId: tokenId.toNumber(),
-                seller,
-                owner,
-                image,
-                name,
-                description,
-                tokenURI,
-              };
-            } catch (error) {
-              console.error(`Error fetching token URI or metadata for tokenId ${tokenId}`, error);
-              return null;
+          data.map(
+            async ({ tokenId, seller, owner, price: unformattedPrice }) => {
+              try {
+                const tokenURI = await contract.tokenURI(tokenId);
+                const {
+                  data: { image, name, description },
+                } = await axios.get(tokenURI);
+                const price = ethers.utils.formatUnits(
+                  unformattedPrice.toString(),
+                  "ether"
+                );
+
+                return {
+                  price,
+                  tokenId: tokenId.toNumber(),
+                  seller,
+                  owner,
+                  image,
+                  name,
+                  description,
+                  tokenURI,
+                };
+              } catch (error) {
+                console.error(
+                  `Error fetching token URI or metadata for tokenId ${tokenId}`,
+                  error
+                );
+                return null;
+              }
             }
-          })
+          )
         );
-  
-        return items.filter(item => item !== null);
+
+        return items.filter((item) => item !== null);
       }
     } catch (error) {
       setError("Error while fetching listed NFTs");
@@ -278,7 +311,6 @@ export const NFTMarketplaceProvider = ({ children }) => {
       console.error("Error in fetchMyNFTsOrListedNFTs:", error);
     }
   };
-  
 
   // const fetchNFTs = async () => {
   //   try {

@@ -56,11 +56,12 @@ const Home = () => {
       <HeroSection />
       <Service />
       <BigNFTSilder />
-      <Title
+      {/* <BigNFTSilder /> */}
+      {/* <Title
         heading="Audio Collection"
         paragraph="Discover the most outstanding NFTs in all topics of life."
-      />
-      <AudioLive />
+      /> */}
+      {/* <AudioLive /> */}
       {creators.length == 0 ? (
         <Loader />
       ) : (
@@ -68,7 +69,7 @@ const Home = () => {
       )}
 
       <Slider />
-      <Collection />
+      {/* <Collection /> */}
       <Title
         heading="Featured NFTs"
         paragraph="Discover the most outstanding NFTs in all topics of life."
@@ -83,7 +84,7 @@ const Home = () => {
       <Category />
       <Subscribe />
       <Brand />
-      <Video />
+      {/* <Video /> */}
     </div>
   );
 };
